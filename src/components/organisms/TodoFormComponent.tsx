@@ -13,14 +13,18 @@ export const TodoFormComponent: React.FC = () => {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        addTodo(title);
-      }}
-    >
-      <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
-      <ButtonComponent type='button' text='追加' onClick={() => addTodo(title)}></ButtonComponent>
-    </form>
+    <div className='my-8'>
+      <div>Add new todo!</div>
+
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          addTodo(title);
+        }}
+      >
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <ButtonComponent type='button' text='Add' onClick={() => addTodo(title)}></ButtonComponent>
+      </form>
+    </div>
   );
 };

@@ -12,10 +12,14 @@ export const TodoComponent: React.FC<Props> = (props) => {
   return (
     <>
       <div>
-        {todo.title} : {todo.isCompleted ? '完了' : '未完了'}
+        {todo.title} : {todo.isCompleted ? 'Completed!' : 'Uncompleted'}
       </div>
-      <ButtonComponent type='button' text={todo.isCompleted ? '戻す' : '完了'} onClick={() => onClickToggle(todo)} />
-      <ButtonComponent type='button' text='削除' onClick={() => onClickRemove(todo)} />
+      <ButtonComponent
+        type='button'
+        text={todo.isCompleted ? 'Uncompleted' : 'Complete'}
+        onClick={() => onClickToggle(todo)}
+      />
+      <ButtonComponent type='button' text='Remove' onClick={() => onClickRemove(todo)} />
     </>
   );
 };

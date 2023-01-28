@@ -2,7 +2,7 @@ export const login = async (req: any, res: any, ctx: any) => {
   const { userName }: { userName: string } = await req.json();
   if (userName === 'john') {
     return res(
-      ctx.delay(5000),
+      ctx.delay(3000),
       ctx.status(200),
       ctx.json({
         userName: 'john',
@@ -11,7 +11,7 @@ export const login = async (req: any, res: any, ctx: any) => {
     );
   }
   return res(
-    ctx.delay(5000),
+    ctx.delay(3000),
     ctx.status(401),
     ctx.json({
       message: 'unauthorized',

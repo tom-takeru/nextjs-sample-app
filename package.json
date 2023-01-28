@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next -c .eslintrc.json lint --dir src",
+    "lint:fix": "npm lint --fix"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
